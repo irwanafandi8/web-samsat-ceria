@@ -15,9 +15,15 @@
         padding-right: 1rem;
     }
 
-    h1 { font-size: 1.5rem !important; }
-    h2 { font-size: 1.25rem !important; }
-    h3 { font-size: 1rem !important; }
+    h1 {
+        font-size: 1.5rem !important;
+    }
+    h2 {
+        font-size: 1.25rem !important;
+    }
+    h3 {
+        font-size: 1rem !important;
+    }
 }
 
 @media (min-width: 640px) and (max-width: 1023px) {
@@ -200,15 +206,31 @@
 @media (max-width: 639px) {
     .section-informasi-list {
         padding: 2rem 1rem;
+        padding-top: 5rem;
     }
 
     .informasi-grid-list {
-        grid-template-columns: 1fr;
-        gap: 1rem;
+        grid-template-columns: 1fr !important;
+    }
+
+    .informasi-card {
+        flex-direction: column !important;
     }
 
     .informasi-card-image {
-        height: 8rem;
+        width: 100% !important;
+        height: 12rem !important;
+        flex-shrink: 0;
+    }
+
+    .informasi-card-image a {
+        width: 100%;
+        height: 100%;
+        display: block;
+    }
+
+    .informasi-card-content {
+        width: 100% !important;
     }
 
     .detail-content {
@@ -282,7 +304,7 @@
     .tutorial-section-title-center h2 {
         font-size: 1.125rem !important;
         font-weight: bold;
-        color: #9E2B0F;
+        color: #9e2b0f;
     }
 
     .tutorial-card {

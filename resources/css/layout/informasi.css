@@ -137,15 +137,9 @@
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
     border: 1px solid #e5e7eb;
     overflow: hidden;
-    background: linear-gradient(90deg, #ffdfe0 50%, #ffffff 50%, #d9daff 100%);
+    background: linear-gradient(90deg, #ffdfe0 10%, #ffffff 30%, #d9daff 100%);
     transition: var(--transition);
 }
-
-/* .informasi-card:hover {
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
-    transform: translateY(-2px);
-    border-color: #fca5a5;
-} */
 
 .informasi-card-image {
     width: 50%;
@@ -165,10 +159,6 @@
     display: block;
     transition: transform 0.3s ease;
 }
-
-/* .informasi-card:hover .informasi-card-image img {
-    transform: scale(1.04);
-} */
 
 .informasi-card-content {
     width: 50%;

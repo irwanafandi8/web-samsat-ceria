@@ -179,7 +179,7 @@
     align-items: center;
     justify-content: space-between;
     padding: 1rem;
-    background: linear-gradient(to bottom, #FFDFE0, #FFFFFF, #D3CFCF);
+    background: linear-gradient(to bottom, #ffdfe0, #ffffff, #d3cfcf);
     border-radius: 0.5rem;
     text-decoration: none;
     transition: var(--transition);
@@ -239,9 +239,17 @@
     margin-top: 2rem;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 639px) {
     .informasi-grid {
         grid-template-columns: repeat(2, 1fr);
+    }
+
+    .infomrasi-card-home {
+        height: auto;
+    }
+
+    .informasi-card-home-image {
+        height: 10rem;
     }
 }
 

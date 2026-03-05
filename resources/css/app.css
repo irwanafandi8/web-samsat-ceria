@@ -9,3 +9,30 @@
     --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
         'Segoe UI Symbol', 'Noto Color Emoji';
 }
+
+/* BASE */
+@import './base/variables.css';
+@import './base/reset.css';
+@import './base/typography.css';
+@import './base/utilities.css';
+
+/* COMPONENTS */
+@import './components/buttons.css';
+@import './components/cards.css';
+@import './components/navigation.css';
+
+/* LAYOUT */
+@import './layout/container.css';
+@import './layout/header.css';
+@import './layout/footer.css';
+@import './layout/home.css';
+@import './layout/informasi.css';
+@import './layout/hubungi-kami.css';
+@import './layout/mengenai.css';
+@import './layout/tutorial.css';
+
+/* FAQ */
+@import './layout/faq.css';
+
+/* RESPONSIVE */
+@import './responsive/responsive.css';

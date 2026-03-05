@@ -1,0 +1,22 @@
+:root {
+    --primary-color: #dc2626;
+    --primary-light: #fef2f2;
+    --secondary-color: #f8fafc;
+    --text-color: #1f2937;
+    --gray-light: #f3f4f6;
+    --transition: all 0.3s ease;
+    --container-sm: 640px;
+    --container-md: 768px;
+    --container-lg: 1024px;
+    --container-xl: 1280px;
+    --container-2xl: 1400px;
+    --container-full: 100%;
+    --spacing-mobile: 1rem;
+    --spacing-tablet: 1.5rem;
+    --spacing-desktop: 2rem;
+    --spacing-large: 3rem;
+    --header-height: 70px;
+    --header-height-scrolled: 70px;
+    --header-height-mobile: 70px;
+    --header-height-mobile-scrolled: 60px;
+}

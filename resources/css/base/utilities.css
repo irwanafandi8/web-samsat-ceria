@@ -1,0 +1,34 @@
+.hide-mobile, .hide-small, .hide-tablet, .hide-desktop-small,
+.hide-desktop, .hide-2k, .hide-4k { display: none; }
+
+.show-mobile, .show-small, .show-tablet, .show-desktop-small,
+.show-desktop, .show-2k, .show-4k { display: none; }
+
+.responsive-grid {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr;
+}
+
+.responsive-img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.aspect-16-9 { aspect-ratio: 16/9; }
+.aspect-4-3 { aspect-ratio: 4/3; }
+.aspect-1-1 { aspect-ratio: 1/1; }
+
+.touch-target { min-height: 44px; min-width: 44px; }
+
+button, .btn, [role="button"] {
+    min-height: 44px;
+    min-width: 44px;
+    cursor: pointer;
+}
+
+.section-padding {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}

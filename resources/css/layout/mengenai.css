@@ -1,0 +1,90 @@
+/* ===== MENGENAI SAMSAT ===== */
+.section-mengenai {
+    padding: 3rem 1rem;
+    background: #ffffff;
+}
+
+.mengenai-back {
+    margin-bottom: 1.5rem;
+}
+
+.back-btn {
+    display: inline-flex;
+    align-items: center;
+    color: #4b5563;
+    font-size: 1.5rem;
+    transition: var(--transition);
+    text-decoration: none;
+}
+
+.back-btn:hover { color: #dc2626; }
+
+.mengenai-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.mengenai-header h1 {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: #111827;
+}
+
+.mengenai-inner {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.mengenai-text {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.mengenai-text p {
+    font-size: 1rem;
+    color: #374151;
+    line-height: 1.8;
+}
+
+.mengenai-app {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    text-align: center;
+}
+
+.mengenai-app img:first-child {
+    width: 12rem;
+    height: auto;
+}
+
+.mengenai-app p {
+    font-size: 0.875rem;
+    color: #4b5563;
+    max-width: 16rem;
+}
+
+.download-btn-store {
+    display: inline-block;
+}
+
+.download-btn-store img {
+    width: 10rem;
+    height: auto;
+    border-radius: 0.5rem;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (min-width: 1024px) {
+    .mengenai-inner {
+        flex-direction: row;
+    }
+
+    .mengenai-text { width: 65%; }
+    .mengenai-app { width: 35%; }
+
+    .mengenai-header h1 { font-size: 2rem; }
+}

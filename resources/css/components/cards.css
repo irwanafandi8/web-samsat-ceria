@@ -1,0 +1,16 @@
+.card {
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.75rem;
+    transition: var(--transition);
+}
+
+.card-hover:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 20px rgba(220, 38, 38, 0.15);
+    border-color: var(--primary-color);
+}
+
+.gradient-bg-information {
+    background: linear-gradient(90deg, #ffdfe0 50%, #ffffff 50%, #d9daff 100%);
+}

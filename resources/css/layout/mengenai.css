@@ -1,6 +1,6 @@
-/* ===== MENGENAI SAMSAT ===== */
+/* MENGENAI SAMSAT */
 .section-mengenai {
-    padding: 3rem 1rem;
+    padding: 5rem 1rem;
     background: #ffffff;
 }
 
@@ -17,7 +17,9 @@
     text-decoration: none;
 }
 
-.back-btn:hover { color: #dc2626; }
+.back-btn:hover {
+    color: #dc2626;
+}
 
 .mengenai-header {
     text-align: center;
@@ -77,14 +79,20 @@
     border-radius: 0.5rem;
 }
 
-/* ===== RESPONSIVE ===== */
+/* RESPONSIVE */
 @media (min-width: 1024px) {
     .mengenai-inner {
         flex-direction: row;
     }
 
-    .mengenai-text { width: 65%; }
-    .mengenai-app { width: 35%; }
+    .mengenai-text {
+        width: 65%;
+    }
+    .mengenai-app {
+        width: 35%;
+    }
 
-    .mengenai-header h1 { font-size: 2rem; }
+    .mengenai-header h1 {
+        font-size: 2rem;
+    }
 }

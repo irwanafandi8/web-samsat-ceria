@@ -4,7 +4,7 @@
 
 @section('content')
 
-    <section class="section-tutorial-page">
+    <section class="section-tutorial-page animate-on-scroll">
         <div class="container-informasi">
             <div class="tutorial-page-inner">
 

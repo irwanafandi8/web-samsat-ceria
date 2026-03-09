@@ -4,7 +4,9 @@
 
             {{-- Kolom 1: Logo & Tagline --}}
             <div class="footer-brand">
-                <img src="{{ asset('assets/images/logo.png') }}" alt="Samsat Ceria" class="footer-logo">
+                <a href="#hero-section">
+                    <img src="{{ asset('assets/images/logo.png') }}" alt="Samsat Ceria" class="footer-logo">
+                </a>
                 <p class="footer-tagline">
                     Praktis Kapan Pun,<br>
                     Di Mana Pun,<br>

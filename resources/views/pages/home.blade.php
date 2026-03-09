@@ -2,11 +2,16 @@
 
 @section('title', 'Beranda - Samsat Ceria')
 
+@section('meta_description', 'Samsat Ceria - Solusi Cepat Bayar Pajak Kendaraan. Bayar pajak STNK online kapan saja dan di mana saja. Praktis, Ringkas, dan Aman.')
+@section('og_title', 'Beranda - Samsat Ceria')
+@section('og_description', 'Bayar pajak kendaraan online kapan saja. Praktis, Ringkas, dan Aman bersama Samsat Ceria.')
+
 @section('content')
 
     {{-- HERO SECTION --}}
-    <section class="hero-bg" style="background-image: url('{{ asset('assets/images/banner/Banner.jpg') }}')" id="hero-section">
-        <div class="container">
+    <section class="section-hero hero-bg animate-on-scroll"
+        style="background-image: url('{{ asset('assets/images/banner/Banner.jpg') }}')" id="hero-section">
+        <div class="container-hero">
             <div class="hero-inner">
 
                 {{-- Logo --}}
@@ -31,7 +36,7 @@
     </section>
 
     {{-- SECTION DOWNLOAD APP --}}
-    <section class="section-download" id="download-section">
+    <section class="section-download animate-on-scroll" id="download-section">
         <div class="container">
             <div class="download-inner">
 
@@ -46,10 +51,10 @@
                     </p>
                     <div class="download-buttons">
                         <a href="#" class="download-btn">
-                            <img src="{{ asset('assets/images/download-appstore.png') }}" alt="Download di App Store">
+                            <img src="{{ asset('assets/images/download-appstore.png') }}" alt="Download di App Store" loading="lazy">
                         </a>
                         <a href="#" class="download-btn">
-                            <img src="{{ asset('assets/images/download-playstore.png') }}" alt="Download di Google Play">
+                            <img src="{{ asset('assets/images/download-playstore.png') }}" alt="Download di Google Play" loading="lazy">
                         </a>
                     </div>
                 </div>
@@ -72,7 +77,7 @@
     </section>
 
     {{-- SECTION TENTANG APLIKASI --}}
-    <section class="section-about" id="informasiApp-section">
+    <section class="section-about animate-on-scroll" id="informasiApp-section">
         <div class="container">
             <div class="about-inner">
 
@@ -99,7 +104,7 @@
     </section>
 
     {{-- SECTION TUTORIAL --}}
-    <section class="section-tutorial" id="tutorial-section">
+    <section class="section-tutorial animate-on-scroll" id="tutorial-section">
         <div class="container">
             <div class="tutorial-inner">
 
@@ -115,7 +120,7 @@
 
                     <a href="{{ route('tutorial.show', 'registrasi') }}" class="tutorial-item">
                         <div class="tutorial-item-left">
-                            <img src="{{ asset('assets/images/tutorial/icon-tutor-1.png') }}" alt="Registrasi">
+                            <img src="{{ asset('assets/images/tutorial/icon-tutor-1.png') }}" alt="Registrasi" loading="lazy">
                             <span>Cara Mendaftarkan Akun Samsat Ceria</span>
                         </div>
                         <i class="fas fa-arrow-right"></i>
@@ -123,7 +128,7 @@
 
                     <a href="{{ route('tutorial.show', 'pembayaran') }}" class="tutorial-item">
                         <div class="tutorial-item-left">
-                            <img src="{{ asset('assets/images/tutorial/icon-tutor-2.png') }}" alt="Pembayaran">
+                            <img src="{{ asset('assets/images/tutorial/icon-tutor-2.png') }}" alt="Pembayaran" loading="lazy">
                             <span>Cara Melakukan Pembayaran</span>
                         </div>
                         <i class="fas fa-arrow-right"></i>
@@ -131,7 +136,7 @@
 
                     <a href="{{ route('tutorial.show', 'stnk') }}" class="tutorial-item">
                         <div class="tutorial-item-left">
-                            <img src="{{ asset('assets/images/tutorial/icon-tutor-3.png') }}" alt="STNK">
+                            <img src="{{ asset('assets/images/tutorial/icon-tutor-3.png') }}" alt="STNK" loading="lazy">
                             <span>Cara Mendaftarkan Kendaraan</span>
                         </div>
                         <i class="fas fa-arrow-right"></i>
@@ -144,8 +149,8 @@
     </section>
 
     {{-- SECTION INFORMASI --}}
-    <section class="section-informasi" id="informasi-section">
-        <div class="container">
+    <section class="section-informasi animate-on-scroll" id="informasi-section">
+        <div class="container-informasi-home">
 
             <div class="section-header-center">
                 <h3 class="section-title">Informasi</h3>

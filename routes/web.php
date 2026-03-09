@@ -28,7 +28,7 @@ Route::prefix('informasi')->name('informasi.')->group(function () {
 // Hubungi Kami
 Route::get('/hubungi-kami', [HubungiKamiController::class, 'index'])->name('hubungi-kami.index');
 Route::post('/hubungi-kami', [HubungiKamiController::class, 'store'])
-    ->middleware('throttle:5,1') // max 5x per menit per IP
+    ->middleware('throttle:5,1')
     ->name('hubungi-kami.store');
 
 // Mengenai Samsat Ceria

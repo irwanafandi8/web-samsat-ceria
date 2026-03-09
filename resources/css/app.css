@@ -17,9 +17,12 @@
 @import './base/utilities.css';
 
 /* COMPONENTS */
+@import './components/back-to-top.css';
+@import './components/breadcrumb.css';
 @import './components/buttons.css';
 @import './components/cards.css';
 @import './components/navigation.css';
+@import './components/loading-screen.css';
 
 /* LAYOUT */
 @import './layout/container.css';
@@ -36,3 +39,6 @@
 
 /* RESPONSIVE */
 @import './responsive/responsive.css';
+
+/* ANIMATION */
+@import './base/animations.css';

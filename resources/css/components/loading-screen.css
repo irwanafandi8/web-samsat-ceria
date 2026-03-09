@@ -1,0 +1,88 @@
+/* ===== LOADING SCREEN ===== */
+.loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #fff5f5, #ffffff, #fff5f5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 99999;
+    transition:
+        opacity 0.5s ease,
+        visibility 0.5s ease;
+}
+
+.loading-screen.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.loading-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.loading-logo {
+    width: 10rem;
+    height: auto;
+    animation: loadingPulse 1.5s ease infinite;
+}
+
+@keyframes loadingPulse {
+    0%,
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.05);
+        opacity: 0.8;
+    }
+}
+
+/* ===== DOTS ===== */
+.loading-dots {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.loading-dots span {
+    width: 0.5rem;
+    height: 0.5rem;
+    background: #dc2626;
+    border-radius: 50%;
+    animation: loadingDot 1.2s ease infinite;
+}
+
+.loading-dots span:nth-child(2) {
+    animation-delay: 0.2s;
+}
+.loading-dots span:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+@keyframes loadingDot {
+    0%,
+    100% {
+        transform: translateY(0);
+        opacity: 0.3;
+    }
+    50% {
+        transform: translateY(-6px);
+        opacity: 1;
+    }
+}
+
+/* ===== TEXT ===== */
+.loading-text {
+    font-size: 0.875rem;
+    color: #9ca3af;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+}

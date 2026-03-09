@@ -2,10 +2,16 @@
 
 @section('title', 'Hubungi Kami - Samsat Ceria')
 
+@section('meta_description', 'Hubungi tim Samsat Ceria. Kami siap membantu Anda 24/7 melalui formulir kontak.')
+@section('og_title', 'Hubungi Kami - Samsat Ceria')
+@section('og_description', 'Ada pertanyaan? Tim support Samsat Ceria siap membantu Anda kapan saja.')
+
 @section('content')
 
+    <x-breadcrumb :items="[['label' => 'Hubungi Kami', 'url' => route('hubungi-kami.index')]]" />
+
     {{-- HEADER --}}
-    <section class="page-header">
+    <section class="page-header animate-on-scroll">
         <div class="container">
             <div class="page-header-inner">
                 <h1>Hubungi Kami</h1>
@@ -15,7 +21,7 @@
     </section>
 
     {{-- FORM KONTAK --}}
-    <section class="section-kontak">
+    <section class="section-kontak animate-on-scroll">
         <div class="container">
             <div class="kontak-wrapper">
                 <div class="kontak-card">

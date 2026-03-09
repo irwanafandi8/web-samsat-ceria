@@ -1,10 +1,13 @@
 /*
-    RESPONSIVE.CSS
-    Mobile  : < 640px
-    Tablet  : 640px - 1023px
-    Desktop : >= 1024px */
+ * RESPONSIVE.CSS
+ * Mobile  : < 640px
+ * Tablet  : 640px - 1023px
+ * Desktop : >= 1024px
+ */
 
-/* GLOBAL */
+/* ================================================
+    GLOBAL
+================================================ */
 @media (max-width: 639px) {
     .container,
     .container-responsive,
@@ -13,16 +16,6 @@
     .container-faq {
         padding-left: 1rem;
         padding-right: 1rem;
-    }
-
-    h1 {
-        font-size: 1.5rem !important;
-    }
-    h2 {
-        font-size: 1.25rem !important;
-    }
-    h3 {
-        font-size: 1rem !important;
     }
 }
 
@@ -37,7 +30,9 @@
     }
 }
 
-/* NAVBAR */
+/* ================================================
+    NAVBAR
+================================================ */
 @media (max-width: 639px) {
     .nav-container {
         padding: 0.75rem 1rem;
@@ -63,7 +58,9 @@
     }
 }
 
-/* PAGE HEADER */
+/* ================================================
+    PAGE HEADER
+================================================ */
 @media (max-width: 639px) {
     .page-header {
         padding: 5rem 1rem 2rem;
@@ -84,30 +81,31 @@
     }
 }
 
-/*
-   HOME — HERO */
+/* ================================================
+    HOME — HERO
+================================================ */
 @media (max-width: 639px) {
     .hero-bg {
         min-height: 420px;
-        padding: 5rem 1rem 2rem;
+        padding: 5rem 0.5rem;
     }
 
     .hero-inner {
-        flex-direction: column;
-        gap: 1.5rem;
-        text-align: center;
+        flex-direction: column-reverse;
+        gap: 2rem;
+        text-align: left;
     }
 
     .hero-content {
         width: 100%;
     }
 
-    .hero-content h1 {
-        font-size: 1.5rem !important;
+    .hero-content h2 {
+        font-size: 1.8rem !important;
     }
 
     .hero-content p {
-        font-size: 0.875rem;
+        font-size: 0.7rem;
     }
 
     .hero-image {
@@ -125,6 +123,18 @@
         flex-wrap: wrap;
         gap: 0.75rem;
     }
+
+    .hero-logo img {
+        width: 14rem;
+    }
+
+    .hero-title {
+        font-size: 1.8rem;
+    }
+
+    .hero-desc {
+        font-size: 1rem;
+    }
 }
 
 @media (min-width: 640px) and (max-width: 1023px) {
@@ -133,80 +143,294 @@
         padding: 5rem 1.5rem 2rem;
     }
 
-    .hero-content h1 {
-        font-size: 1.875rem !important;
+    .hero-title {
+        font-size: 2.5rem;
     }
 
-    .hero-image img {
-        max-width: 18rem;
+    .hero-logo img {
+        width: 18rem;
     }
 }
 
-/*
-   HOME — FEATURES / CARDS */
+/* ================================================
+    HOME — DESKTOP
+================================================ */
+@media (min-width: 1024px) {
+    .hero-inner {
+        flex-direction: row;
+        padding-top: 5rem;
+    }
+
+    .hero-logo {
+        width: 40%;
+    }
+
+    .hero-logo img {
+        width: 100%;
+    }
+
+    .hero-text {
+        width: 60%;
+    }
+
+    .hero-title {
+        font-size: 2.9rem;
+    }
+
+    .download-inner {
+        flex-direction: row;
+    }
+
+    .download-text {
+        width: 60%;
+    }
+
+    .download-mockup {
+        width: 40%;
+    }
+
+    .download-btn img {
+        width: 11rem;
+    }
+
+    .about-inner {
+        flex-direction: row;
+    }
+
+    .about-image {
+        width: 35%;
+    }
+
+    .about-text {
+        width: 65%;
+    }
+
+    .section-title {
+        font-size: 2.5rem;
+    }
+
+    .tutorial-inner {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .tutorial-header {
+        width: 40%;
+    }
+
+    .tutorial-list {
+        width: 60%;
+    }
+
+    .informasi-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* ================================================
+    HOME — DOWNLOAD
+================================================ */
 @media (max-width: 639px) {
-    .section-features,
-    .section-tutorial,
-    .section-informasi,
-    .section-about {
-        padding: 2.5rem 1rem;
+    .section-download {
+        padding: 2rem 1rem;
     }
 
-    .features-grid {
-        grid-template-columns: 1fr;
-        gap: 1rem;
+    .download-inner {
+        flex-direction: column-reverse;
+        text-align: left;
+        gap: 1.5rem;
     }
 
-    .feature-card {
-        padding: 1.25rem;
+    .download-buttons {
+        justify-content: center;
+    }
+
+    .download-btn img {
+        width: 8rem;
+    }
+
+    .download-mockup {
+        height: 18rem;
+    }
+
+    .mockup-app img {
+        width: 9rem;
+    }
+
+    .mockup-ellipse-1 img {
+        width: 12rem;
+        top: 5rem;
+        left: 5rem;
+    }
+
+    .mockup-ellipse-2 img {
+        width: 10rem;
+        bottom: 5rem;
+        right: 5rem;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
     }
 }
 
 @media (min-width: 640px) and (max-width: 1023px) {
-    .features-grid {
-        grid-template-columns: repeat(2, 1fr);
+    .section-download {
+        padding: 2.5rem 1.5rem;
+    }
+}
+
+/* ================================================
+    HOME — ABOUT
+================================================ */
+@media (max-width: 639px) {
+    .section-about {
+        padding: 2.5rem 1rem;
     }
 
-    .section-features,
-    .section-tutorial,
-    .section-informasi,
+    .about-image img {
+        max-width: 14rem;
+    }
+}
+
+@media (min-width: 640px) and (max-width: 1023px) {
     .section-about {
         padding: 3rem 1.5rem;
     }
 }
 
-/*
-   HOME — DOWNLOAD APP */
+/* ================================================
+    HOME — TUTORIAL
+================================================ */
 @media (max-width: 639px) {
-    .download-section {
-        flex-direction: column;
-        text-align: center;
-        gap: 1.5rem;
-        padding: 2rem 1rem;
-    }
-
-    .download-buttons {
-        justify-content: center;
-        flex-wrap: wrap;
-    }
-
-    .download-image img {
-        max-width: 12rem;
+    .section-tutorial {
+        padding: 2.5rem 1rem;
     }
 }
 
 @media (min-width: 640px) and (max-width: 1023px) {
-    .download-section {
-        padding: 2.5rem 1.5rem;
+    .section-tutorial {
+        padding: 3rem 1.5rem;
     }
 }
 
-/*
-   INFORMASI */
+/* ================================================
+    HOME — INFORMASI
+================================================ */
+@media (max-width: 431px) {
+    .section-informasi {
+        padding: 0.5rem 0.5rem;
+    }
+
+    .container-informasi-home {
+        padding: var(--spacing-mobile);
+    }
+
+    .informasi-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    .informasi-card-home {
+        flex-direction: column !important;
+    }
+
+    .informasi-card-home-image {
+        width: 100% !important;
+        height: auto !important;
+        flex-shrink: 0;
+    }
+
+    .informasi-card-home-image a {
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+
+    .informasi-card-home-content {
+        width: 100% !important;
+    }
+
+    .informasi-card-home-content h3 {
+        font-size: 1rem;
+    }
+}
+
+@media (min-width: 432px) and (max-width: 639px) {
+    .section-informasi {
+        padding: 2.5rem 1.5rem;
+    }
+
+    .informasi-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    .informasi-card-home {
+        flex-direction: column !important;
+    }
+
+    .informasi-card-home-image {
+        width: 100% !important;
+        height: auto !important;
+        flex-shrink: 0;
+    }
+
+    .informasi-card-home-image a {
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+
+    .informasi-card-home-content {
+        width: 100% !important;
+    }
+
+    .informasi-card-home-content h3 {
+        font-size: 1rem;
+    }
+}
+
+@media (min-width: 640px) and (max-width: 1023px) {
+    .section-informasi {
+        padding: 2.5rem 1rem;
+    }
+
+    .informasi-grid {
+        grid-template-columns: 1fr !important;
+        gap: 1rem;
+    }
+
+    .informasi-card-home {
+        flex-direction: column;
+    }
+
+    .informasi-card-home-image {
+        width: 100%;
+        height: 70%;
+        flex-shrink: 0;
+    }
+
+    .informasi-card-home-image a {
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+
+    .informasi-card-home-content {
+        width: 100%;
+        height: 30%;
+    }
+
+    .informasi-card-home-content h3 {
+        font-size: 1rem;
+    }
+}
+
+/* ================================================
+    INFORMASI PAGE
+================================================ */
 @media (max-width: 639px) {
     .section-informasi-list {
-        padding: 2rem 1rem;
-        padding-top: 5rem;
+        padding: 5rem 1rem;
     }
 
     .informasi-grid-list {
@@ -219,14 +443,14 @@
 
     .informasi-card-image {
         width: 100% !important;
-        height: 12rem !important;
+        height: auto !important;
         flex-shrink: 0;
     }
 
     .informasi-card-image a {
+        display: block;
         width: 100%;
         height: 100%;
-        display: block;
     }
 
     .informasi-card-content {
@@ -243,7 +467,7 @@
 
     .detail-image img {
         max-width: 100%;
-        height: 12rem;
+        height: 100%;
     }
 
     .detail-text {
@@ -251,26 +475,64 @@
     }
 
     .detail-text h3 {
-        font-size: 1.125rem !important;
+        font-size: 2rem !important;
     }
 }
 
 @media (min-width: 640px) and (max-width: 1023px) {
-    .informasi-grid-list {
-        grid-template-columns: repeat(2, 1fr);
+    .section-informasi-list {
+        padding: 5rem 1.5rem;
     }
 
-    .section-informasi-list {
-        padding: 2.5rem 1.5rem;
+    .informasi-grid-list {
+        grid-template-columns: 1fr !important;
+    }
+
+    .informasi-card {
+        flex-direction: column !important;
+    }
+
+    .informasi-card-image {
+        width: 100% !important;
+        height: auto !important;
+        flex-shrink: 0;
+    }
+
+    .informasi-card-image a {
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+
+    .informasi-card-content {
+        width: 100% !important;
+    }
+
+    .detail-content {
+        flex-direction: column;
+    }
+
+    .detail-image {
+        width: 100%;
     }
 
     .detail-image img {
-        height: 14rem;
+        max-width: 100%;
+        height: 100%;
+    }
+
+    .detail-text {
+        width: 100%;
+    }
+
+    .detail-text h3 {
+        font-size: 2rem !important;
     }
 }
 
-/*
-   TUTORIAL */
+/* ================================================
+    TUTORIAL
+================================================ */
 @media (max-width: 639px) {
     .section-tutorial-page {
         padding: 4.5rem 0 2rem;
@@ -345,8 +607,9 @@
     }
 }
 
-/*
-   HUBUNGI KAMI */
+/* ================================================
+    HUBUNGI KAMI
+================================================ */
 @media (max-width: 639px) {
     .section-kontak {
         padding: 2rem 1rem;
@@ -385,8 +648,9 @@
     }
 }
 
-/*
-   FAQ */
+/* ================================================
+    FAQ
+================================================ */
 @media (max-width: 639px) {
     .section-faq {
         padding: 2rem 0 3rem;
@@ -447,11 +711,12 @@
     }
 }
 
-/*
-   MENGENAI SAMSAT CERIA */
+/* ================================================
+    MENGENAI SAMSAT CERIA
+================================================ */
 @media (max-width: 639px) {
     .section-mengenai {
-        padding: 2rem 1rem;
+        padding: 5rem 1rem;
     }
 
     .mengenai-inner {
@@ -489,7 +754,7 @@
 
 @media (min-width: 640px) and (max-width: 1023px) {
     .section-mengenai {
-        padding: 2.5rem 1.5rem;
+        padding: 5rem 1.5rem;
     }
 
     .visi-misi-grid {
@@ -501,8 +766,9 @@
     }
 }
 
-/*
-   FOOTER */
+/* ================================================
+   FOOTER
+================================================ */
 @media (max-width: 639px) {
     .footer {
         padding: 2rem 1rem 1rem;
@@ -517,6 +783,11 @@
     .footer-links,
     .footer-contact {
         width: 100%;
+    }
+
+    .footer-tagline {
+        font-weight: bold;
+        font-size: 1.2rem;
     }
 
     .footer-logo img {

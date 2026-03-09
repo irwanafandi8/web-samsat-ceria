@@ -4,6 +4,11 @@
 
 @section('tutorial-content')
 
+    <x-breadcrumb :items="[
+        ['label' => 'Tutorial', 'url' => route('tutorial.index')],
+        ['label' => $data['sections'][0]['judul'] ?? 'Detail', 'url' => '#'],
+    ]" />
+
     @foreach ($data['sections'] as $section)
         <div id="{{ $section['id'] }}" style="margin-bottom: 3rem;">
 
@@ -47,4 +52,3 @@
     @endforeach
 
 @endsection
-        

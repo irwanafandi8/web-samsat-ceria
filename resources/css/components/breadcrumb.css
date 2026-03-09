@@ -1,0 +1,63 @@
+/* ===== BREADCRUMB ===== */
+.breadcrumb-nav {
+    background: #ffffff;
+    border-bottom: 1px solid #f3f4f6;
+    padding: 0.625rem 0;
+}
+
+.breadcrumb-list {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    list-style: none;
+    gap: 0.25rem;
+    margin: 0;
+    padding: 0;
+}
+
+.breadcrumb-item {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.breadcrumb-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.375rem;
+    font-size: 0.8rem;
+    color: #6b7280;
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.breadcrumb-link:hover {
+    color: #dc2626;
+}
+
+.breadcrumb-link i {
+    font-size: 0.75rem;
+}
+
+.breadcrumb-separator {
+    font-size: 0.625rem;
+    color: #d1d5db;
+}
+
+.breadcrumb-active {
+    font-size: 0.8rem;
+    color: #dc2626;
+    font-weight: 600;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 639px) {
+    .breadcrumb-nav {
+        padding: 0.5rem 0;
+    }
+
+    .breadcrumb-link,
+    .breadcrumb-active {
+        font-size: 0.75rem;
+    }
+}

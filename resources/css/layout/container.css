@@ -9,6 +9,30 @@
     box-sizing: border-box;
 }
 
+/* CONTAINER SECTION-HERO */
+.container-hero {
+    width: 100%;
+    max-width: 80rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+/* CONTAINER SECTION-INFORMASI-HOME */
+.container-informasi-home {
+    width: 100%;
+    max-width: 80rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
 /* CONTAINER INFORMASI */
 .container-informasi {
     width: 100%;

@@ -2,10 +2,18 @@
 
 @section('title', 'FAQ - Samsat Ceria')
 
+@section('meta_description', 'Temukan jawaban atas pertanyaan seputar Samsat Ceria. FAQ lengkap tentang registrasi,
+    pembayaran pajak, dan dokumen digital.')
+@section('meta_keywords', 'FAQ samsat ceria, pertanyaan samsat, bantuan samsat ceria')
+@section('og_title', 'FAQ - Samsat Ceria')
+@section('og_description', 'Temukan jawaban atas pertanyaan yang sering ditanyakan seputar Samsat Ceria.')
+
 @section('content')
 
+    <x-breadcrumb :items="[['label' => 'FAQ', 'url' => route('faq.index')]]" />
+
     {{-- PAGE HEADER --}}
-    <section class="page-header">
+    <section class="page-header animate-on-scroll">
         <div class="container">
             <div class="page-header-inner">
                 <h1>Frequently Asked Questions</h1>
@@ -15,7 +23,7 @@
     </section>
 
     {{-- FAQ CONTENT --}}
-    <section class="section-faq">
+    <section class="section-faq animate-on-scroll">
         <div class="container-faq">
 
             {{-- Search --}}
@@ -138,7 +146,7 @@
             document.querySelectorAll('.faq-tab').forEach(tab => {
                 tab.addEventListener('click', function() {
                     document.querySelectorAll('.faq-tab').forEach(t => t.classList.remove(
-                    'active'));
+                        'active'));
                     this.classList.add('active');
 
                     const kategori = this.getAttribute('data-kategori');

@@ -4,8 +4,10 @@
 
 @section('content')
 
+    <x-breadcrumb :items="[['label' => 'Mengenai Samsat Ceria', 'url' => route('mengenai-samsat.index')]]" />
+
     {{-- CONTENT MENGENAI --}}
-    <section class="section-mengenai">
+    <section class="section-mengenai animate-on-scroll">
         <div class="container">
 
             {{-- Tombol Kembali --}}

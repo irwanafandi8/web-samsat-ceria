@@ -2,11 +2,17 @@
 
 @section('title', 'Informasi - Samsat Ceria')
 
+@section('meta_description', 'Informasi terbaru seputar pajak kendaraan bermotor, STNK, dan layanan Samsat Ceria.')
+@section('og_title', 'Informasi - Samsat Ceria')
+@section('og_description', 'Baca artikel dan informasi terbaru seputar layanan Samsat Ceria.')
+
 @section('content')
+
+    <x-breadcrumb :items="[['label' => 'Informasi', 'url' => route('informasi.index')]]" />
 
     {{-- DETAIL ARTIKEL --}}
     @if (isset($artikelDetail) && $artikelDetail && session('show_detail', true))
-        <section class="detail-artikel" id="detail-artikel">
+        <section class="detail-artikel animate-on-scroll" id="detail-artikel">
             <div class="container">
 
                 {{-- Tombol Close --}}
@@ -55,7 +61,7 @@
     @endif
 
     {{-- SECTION INFORMASI --}}
-    <section class="section-informasi-list">
+    <section class="section-informasi-list animate-on-scroll">
         <div class="container">
 
             <div class="section-header-left">

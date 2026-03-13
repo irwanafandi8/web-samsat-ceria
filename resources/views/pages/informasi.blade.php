@@ -87,7 +87,7 @@
 
     {{-- ARTIKEL TERKAIT --}}
     @if (isset($artikelTerkait) && count($artikelTerkait) > 0)
-        <div class="container">
+        <div class="container animate-on-scroll">
             <div class="artikel-terkait">
                 <h4 class="artikel-terkait-title">
                     Artikel Terkait
@@ -120,7 +120,7 @@
     @endif
 
     {{-- SEARCH --}}
-    <section class="section-search">
+    <section class="section-search animate-on-scroll">
         <div class="container">
             <form action="{{ route('informasi.index') }}" method="GET" class="search-form">
                 <div class="search-input-wrapper">

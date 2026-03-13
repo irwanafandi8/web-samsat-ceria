@@ -362,7 +362,7 @@
 
 /* SEARCH */
 .section-search {
-    padding: 1.5rem 1rem 0;
+    padding: 5rem 1rem 0;
     background: #ffffff;
 }
 
@@ -391,18 +391,12 @@
     width: 100%;
     padding: 0.625rem 2.5rem 0.625rem 2.5rem;
     border: 1.5px solid #e5e7eb;
-    border-radius: 0.5rem;
+    border-radius: 5rem;
     font-size: 0.875rem;
     color: #111827;
     outline: none;
     transition: var(--transition);
     background: #f9fafb;
-}
-
-.search-input:focus {
-    border-color: #dc2626;
-    background: #ffffff;
-    box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.08);
 }
 
 .search-clear {
@@ -415,16 +409,12 @@
     transition: var(--transition);
 }
 
-.search-clear:hover {
-    color: #dc2626;
-}
-
 .search-btn {
     padding: 0.625rem 1.25rem;
     background: linear-gradient(135deg, #dc2626, #7f1d1d);
     color: #ffffff;
     border: none;
-    border-radius: 0.5rem;
+    border-radius: 5rem;
     font-size: 0.875rem;
     font-weight: 600;
     cursor: pointer;

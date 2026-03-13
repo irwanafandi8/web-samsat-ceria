@@ -14,6 +14,7 @@ class ArtikelSeeder extends Seeder
                 'judul'    => 'Cara Cek Pajak Kendaraan Bermotor via Online Bisa Pakai Ponsel',
                 'slug'     => 'cara-cek-pajak-kendaraan-bermotor-via-online-bisa-pakai-ponsel',
                 'sumber'   => 'TANGSELIFE.COM',
+                'kategori_id' => 1,
                 'gambar'   => 'assets/images/artikel/poster-artikel-1.png',
                 'deskripsi' => json_encode([
                     'TANGSELIFE.COM- Cek pajak kendaraan bermotor via online kini semakin mudah hanya melalui ponsel. Pengecekan pajak kendaraan bermotor lewat ponsel pun memudahkan masyarakat manusia tanpa harus terganggu kegiatan sehari-harinya. Saat ini, pemohon tidak perlu lagi datang ke kantor Samsat hanya untuk mengecek pajak kendaraan bermotor.',
@@ -28,6 +29,7 @@ class ArtikelSeeder extends Seeder
                 'judul'    => 'Notifikasi Real-time Pembayaran Pajak',
                 'slug'     => 'notifikasi-real-time-pembayaran-pajak',
                 'sumber'   => 'Samsat Ceria',
+                'kategori_id' => 3,
                 'gambar'   => 'assets/images/artikel/poster-artikel-1.png',
                 'deskripsi' => json_encode([
                     'Fitur notifikasi real-time pada aplikasi Samsat Ceria merupakan inovasi terbaru yang dirancang untuk memudahkan pengguna dalam memantau status pembayaran pajak kendaraan mereka.',
@@ -42,6 +44,7 @@ class ArtikelSeeder extends Seeder
                 'judul'    => 'Akses Riwayat Transaksi Kapan Saja',
                 'slug'     => 'akses-riwayat-transaksi-kapan-saja',
                 'sumber'   => 'Samsat Ceria',
+                'kategori_id' => 3,
                 'gambar'   => 'assets/images/artikel/poster-artikel-1.png',
                 'deskripsi' => json_encode([
                     'Fitur riwayat transaksi pada aplikasi Samsat Ceria memberikan kemudahan luar biasa bagi pengguna untuk mengakses seluruh histori pembayaran pajak kendaraan secara lengkap, akurat, dan terstruktur.',
@@ -56,6 +59,7 @@ class ArtikelSeeder extends Seeder
                 'judul'    => 'Keamanan Data Terenkripsi',
                 'slug'     => 'keamanan-data-terenkripsi',
                 'sumber'   => 'Samsat Ceria',
+                'kategori_id' => 3,
                 'gambar'   => 'assets/images/artikel/poster-artikel-1.png',
                 'deskripsi' => json_encode([
                     'Samsat Ceria menerapkan sistem keamanan berlapis dengan standar tertinggi untuk melindungi data pribadi dan transaksi pengguna dari berbagai ancaman siber yang terus berkembang.',
@@ -71,6 +75,7 @@ class ArtikelSeeder extends Seeder
                 'judul'    => 'Laporan Pajak Otomatis',
                 'slug'     => 'laporan-pajak-otomatis',
                 'sumber'   => 'Samsat Ceria',
+                'kategori_id' => 1,
                 'gambar'   => 'assets/images/artikel/poster-artikel-1.png',
                 'deskripsi' => json_encode([
                     'Fitur laporan pajak otomatis dari Samsat Ceria merupakan solusi cerdas bagi pemilik kendaraan yang membutuhkan rekapitulasi pembayaran pajak secara akurat dan profesional tanpa repot menghitung manual.',
@@ -86,6 +91,7 @@ class ArtikelSeeder extends Seeder
                 'judul'    => 'Bantuan 24/7 via Chat dan Telepon',
                 'slug'     => 'bantuan-247-via-chat-dan-telepon',
                 'sumber'   => 'Samsat Ceria',
+                'kategori_id' => 5,
                 'gambar'   => 'assets/images/artikel/poster-artikel-1.png',
                 'deskripsi' => json_encode([
                     'Layanan customer service Samsat Ceria hadir dengan komitmen untuk memberikan dukungan penuh kepada pengguna selama 24 jam sehari, 7 hari seminggu, termasuk hari libur nasional.',
@@ -101,6 +107,7 @@ class ArtikelSeeder extends Seeder
                 'judul'    => 'Cek Denda Pajak Kendaraan Online',
                 'slug'     => 'cek-denda-pajak-kendaraan-online',
                 'sumber'   => 'Samsat Ceria',
+                'kategori_id' => 1,
                 'gambar'   => 'assets/images/artikel/poster-artikel-1.png',
                 'deskripsi' => json_encode([
                     'Fitur cek denda pajak kendaraan online dari Samsat Ceria memberikan kemudahan bagi pengguna untuk menghitung secara akurat besaran denda yang harus dibayar jika terlambat melakukan pembayaran pajak.',
@@ -116,6 +123,7 @@ class ArtikelSeeder extends Seeder
                 'judul'    => 'Perpanjangan STNK Online',
                 'slug'     => 'perpanjangan-stnk-online',
                 'sumber'   => 'Samsat Ceria',
+                'kategori_id' => 2,
                 'gambar'   => 'assets/images/artikel/poster-artikel-1.png',
                 'deskripsi' => json_encode([
                     'Layanan perpanjangan STNK online dari Samsat Ceria merevolusi cara pemilik kendaraan memperpanjang masa berlaku STNK, mengubah proses yang dulu rumit menjadi pengalaman digital yang mulus dan nyaman.',
@@ -131,6 +139,7 @@ class ArtikelSeeder extends Seeder
                 'judul'    => 'Mutasi Kendaraan Antar Provinsi',
                 'slug'     => 'mutasi-kendaraan-antar-provinsi',
                 'sumber'   => 'Samsat Ceria',
+                'kategori_id' => 2,
                 'gambar'   => 'assets/images/artikel/poster-artikel-1.png',
                 'deskripsi' => json_encode([
                     'Layanan mutasi kendaraan antar provinsi melalui Samsat Ceria merupakan terobosan besar yang memungkinkan pemilik kendaraan mengurus perpindahan registrasi kendaraan secara online end-to-end.',
@@ -146,6 +155,7 @@ class ArtikelSeeder extends Seeder
                 'judul'    => 'Samsat Keliling Lokasi Hari Ini',
                 'slug'     => 'samsat-keliling-lokasi-hari-ini',
                 'sumber'   => 'Samsat Ceria',
+                'kategori_id' => 4,
                 'gambar'   => 'assets/images/artikel/poster-artikel-1.png',
                 'deskripsi' => json_encode([
                     'Fitur Samsat Keliling Lokasi Hari Ini pada aplikasi Samsat Ceria memberikan informasi komprehensif dan real-time mengenai keberadaan unit layanan Samsat Keliling di seluruh wilayah operasional.',

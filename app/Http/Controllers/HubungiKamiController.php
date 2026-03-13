@@ -11,7 +11,9 @@ class HubungiKamiController extends Controller
 {
     public function index(): View
     {
-        return view('pages.hubungi-kami');
+        // Hapus session success setelah dibaca
+        $success = session()->pull('success');
+        return view('pages.hubungi-kami', compact('success'));
     }
 
     public function store(Request $request): RedirectResponse

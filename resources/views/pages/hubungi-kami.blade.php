@@ -6,6 +6,11 @@
 @section('og_title', 'Hubungi Kami - Samsat Ceria')
 @section('og_description', 'Ada pertanyaan? Tim support Samsat Ceria siap membantu Anda kapan saja.')
 
+@push('meta')
+    <meta http-equiv="Cache-Control" content="no-store, no-cache, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+@endpush
+
 @section('content')
 
     <x-breadcrumb :items="[['label' => 'Hubungi Kami', 'url' => route('hubungi-kami.index')]]" />
@@ -85,8 +90,8 @@
     </section>
 
     {{-- MODAL SUCCESS --}}
-    <div id="successModal" class="modal-overlay {{ session('success') ? 'active' : '' }}">
-        <div class="modal-box {{ session('success') ? 'active' : '' }}">
+    <div id="successModal" class="modal-overlay">
+        <div class="modal-box">
 
             <button id="closeModalBtn" class="modal-close-x">
                 <i class="fas fa-times"></i>
@@ -110,16 +115,43 @@
     <script>
         document.addEventListener('DOMContentLoaded', function() {
 
+            // Ambil status success dari PHP
+            const isSuccess = {{ $success ? 'true' : 'false' }};
+
             // MODAL
             const successModal = document.getElementById('successModal');
             const closeModalBtn = document.getElementById('closeModalBtn');
             const closeModalBtnOk = document.getElementById('closeModalBtnOk');
             const modalBox = successModal?.querySelector('.modal-box');
 
+            function openModal() {
+                successModal.classList.add('active');
+                modalBox.classList.add('active');
+            }
+
             function closeModal() {
                 modalBox.classList.remove('active');
                 setTimeout(() => successModal.classList.remove('active'), 200);
             }
+
+            // Tampilkan modal hanya jika bukan dari back button
+            if (isSuccess && !sessionStorage.getItem('modal_shown')) {
+                sessionStorage.setItem('modal_shown', 'true');
+                openModal();
+            }
+
+            // Reset sessionStorage saat navigasi ke halaman lain
+            window.addEventListener('pagehide', function() {
+                sessionStorage.removeItem('modal_shown');
+            });
+
+            // Back button — sembunyikan modal
+            window.addEventListener('pageshow', function(e) {
+                if (e.persisted) {
+                    closeModal();
+                    sessionStorage.removeItem('modal_shown');
+                }
+            });
 
             closeModalBtn?.addEventListener('click', closeModal);
             closeModalBtnOk?.addEventListener('click', closeModal);
@@ -151,7 +183,6 @@
                 },
             };
 
-            // Buat elemen warning
             function showWarning(input, message) {
                 clearWarning(input);
                 input.classList.add('input-error');
@@ -167,7 +198,6 @@
                 if (existing) existing.remove();
             }
 
-            // Validasi realtime saat user mulai ketik
             Object.values(fields).forEach(({
                 el
             }) => {
@@ -175,7 +205,6 @@
                     if (el.value.trim() !== '') clearWarning(el);
                 });
 
-                // Validasi email format realtime
                 if (el?.type === 'email') {
                     el.addEventListener('blur', () => {
                         if (el.value.trim() && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(el.value)) {
@@ -187,16 +216,13 @@
                 }
             });
 
-            // Validasi saat submit
             form?.addEventListener('submit', function(e) {
                 let valid = true;
 
-                // Clear semua warning dulu
                 Object.values(fields).forEach(({
                     el
                 }) => clearWarning(el));
 
-                // Cek setiap field
                 Object.values(fields).forEach(({
                     el,
                     msg
@@ -207,14 +233,12 @@
                     }
                 });
 
-                // Cek email format
                 const emailEl = fields.email.el;
                 if (emailEl?.value.trim() && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailEl.value)) {
                     showWarning(emailEl, 'Format email tidak valid.');
                     valid = false;
                 }
 
-                // Cek minimal karakter pesan
                 const msgEl = fields.message.el;
                 if (msgEl?.value.trim() && msgEl.value.trim().length < 10) {
                     showWarning(msgEl, 'Pesan minimal 10 karakter.');
@@ -223,7 +247,6 @@
 
                 if (!valid) {
                     e.preventDefault();
-                    // Scroll ke field pertama yang error
                     const firstError = form.querySelector('.input-error');
                     firstError?.scrollIntoView({
                         behavior: 'smooth',

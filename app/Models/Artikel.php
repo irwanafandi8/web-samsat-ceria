@@ -6,17 +6,23 @@ use Illuminate\Database\Eloquent\Model;
 
 class Artikel extends Model
 {
+    protected $table = 'artikels';
+
     protected $fillable = [
         'judul',
         'slug',
         'sumber',
+        'kategori_id',
         'gambar',
         'deskripsi',
-        'datetime',
     ];
 
     protected $casts = [
-        'datetime' => 'datetime',
         'deskripsi' => 'array',
     ];
+
+    public function kategori()
+    {
+        return $this->belongsTo(Kategori::class, 'kategori_id');
+    }
 }

@@ -1,7 +1,8 @@
-/* ===== BREADCRUMB ===== */
+/* BREADCRUMB */
 .breadcrumb-nav {
     background: #ffffff;
     border-bottom: 1px solid #f3f4f6;
+    border-radius: 20px;
     padding: 0.625rem 0;
 }
 
@@ -50,7 +51,7 @@
     font-weight: 600;
 }
 
-/* ===== RESPONSIVE ===== */
+/* RESPONSIVE */
 @media (max-width: 639px) {
     .breadcrumb-nav {
         padding: 0.5rem 0;

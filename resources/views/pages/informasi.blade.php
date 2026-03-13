@@ -60,6 +60,40 @@
         </section>
     @endif
 
+    {{-- ARTIKEL TERKAIT --}}
+    @if (isset($artikelTerkait) && count($artikelTerkait) > 0)
+        <div class="container">
+            <div class="artikel-terkait">
+                <h4 class="artikel-terkait-title">
+                    Artikel Terkait
+                </h4>
+                <div class="artikel-terkait-grid">
+                    @foreach ($artikelTerkait as $terkait)
+                        <a href="{{ route('informasi.index', ['slug' => $terkait['slug'] ?? '']) }}"
+                            class="artikel-terkait-card">
+                            <div class="artikel-terkait-image">
+                                <img src="{{ asset($terkait['gambar'] ?? '') }}" alt="{{ $terkait['judul'] ?? '' }}"
+                                    loading="lazy">
+                            </div>
+                            <div class="artikel-terkait-content">
+                                @if (!empty($terkait['kategori']))
+                                    <span class="artikel-terkait-kategori">
+                                        {{ $terkait['kategori'] }}
+                                    </span>
+                                @endif
+                                <h5>{{ Str::limit($terkait['judul'] ?? '', 60) }}</h5>
+                                <p class="artikel-terkait-date">
+                                    <i class="far fa-calendar-alt"></i>
+                                    {{ \Carbon\Carbon::parse($terkait['created_at'])->format('d M Y') }}
+                                </p>
+                            </div>
+                        </a>
+                    @endforeach
+                </div>
+            </div>
+        </div>
+    @endif
+
     {{-- SECTION INFORMASI --}}
     <section class="section-informasi-list animate-on-scroll">
         <div class="container">
@@ -92,7 +126,7 @@
                                 </a>
                                 <p class="informasi-date">
                                     <i class="far fa-calendar-alt"></i>
-                                    {{ \Carbon\Carbon::parse($artikel['datetime'])->format('d M Y') }}
+                                    {{ \Carbon\Carbon::parse($artikel['created_at'])->format('d M Y') }}
                                 </p>
                                 <div class="informasi-card-footer">
                                     <a href="{{ route('informasi.index', ['slug' => $artikel['slug']]) }}"

@@ -26,9 +26,9 @@
     <meta name="twitter:image" content="@yield('og_image', asset('assets/images/logo.png'))">
 
     {{-- Favicon --}}
-    <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('assets/images/favicon-32x32.png') }}">
-    <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('assets/images/favicon-16x16.png') }}">
-    <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('assets/images/favicon-180x180.png') }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('assets/images/favicon/favicon-32x32.png') }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('assets/images/favicon/favicon-16x16.png') }}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('assets/images/favicon/favicon-180x180.png') }}">
 
     <title>@yield('title', 'Samsat Ceria')</title>
 

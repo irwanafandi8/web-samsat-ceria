@@ -54,6 +54,11 @@
                             {{ \Carbon\Carbon::parse($artikelDetail['created_at'])->format('d M Y') }}
                         </p>
 
+                        <p class="informasi-views">
+                            <i class="fas fa-eye"></i>
+                            {{ number_format($artikelDetail['views']) }} kali dilihat
+                        </p>
+
                         {{-- SHARE ARTIKEL --}}
                         <div class="share-artikel">
                             <p class="share-label">
@@ -152,7 +157,21 @@
         <div class="container">
 
             <div class="section-header-left">
-                <h2>Informasi Lainnya</h2>
+                <div class="section-header-top">
+                    <h2>Informasi Lainnya</h2>
+                    <div class="sort-buttons">
+                        <a href="{{ route('informasi.index', array_merge(request()->query(), ['sort' => 'terpopuler'])) }}"
+                            class="sort-btn {{ ($sortBy ?? 'terpopuler') === 'terpopuler' ? 'active' : '' }}">
+                            <i class="fas fa-fire"></i>
+                            Terpopuler
+                        </a>
+                        <a href="{{ route('informasi.index', array_merge(request()->query(), ['sort' => 'terbaru'])) }}"
+                            class="sort-btn {{ ($sortBy ?? '') === 'terbaru' ? 'active' : '' }}">
+                            <i class="fas fa-clock"></i>
+                            Terbaru
+                        </a>
+                    </div>
+                </div>
             </div>
 
             @if (isset($artikels) && count($artikels) > 0)
@@ -180,6 +199,10 @@
                                 <p class="informasi-date">
                                     <i class="far fa-calendar-alt"></i>
                                     {{ \Carbon\Carbon::parse($artikel['created_at'])->format('d M Y') }}
+                                </p>
+                                <p class="informasi-views">
+                                    <i class="fas fa-eye"></i>
+                                    {{ number_format($artikel['views']) }} kali dilihat
                                 </p>
                                 <div class="informasi-card-footer">
                                     <a href="{{ route('informasi.index', ['slug' => $artikel['slug']]) }}"

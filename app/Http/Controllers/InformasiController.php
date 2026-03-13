@@ -9,13 +9,19 @@ class InformasiController extends Controller
 {
     public function index(Request $request)
     {
-        $search = $request->get('search');
+        $search  = $request->get('search');
+        $sortBy  = $request->get('sort', 'terpopuler'); // default terpopuler
 
         $artikels = Artikel::with('kategori')
             ->when($search, function ($query) use ($search) {
                 $query->where('judul', 'ilike', "%{$search}%");
             })
-            ->latest('created_at')
+            ->when($sortBy === 'terpopuler', function ($query) {
+                $query->orderBy('views', 'desc');
+            })
+            ->when($sortBy === 'terbaru', function ($query) {
+                $query->orderBy('created_at', 'desc');
+            })
             ->get()
             ->map(function ($artikel) {
                 return [
@@ -24,6 +30,7 @@ class InformasiController extends Controller
                     'gambar'      => $artikel->gambar,
                     'kategori_id' => $artikel->kategori_id,
                     'kategori'    => $artikel->kategori?->nama,
+                    'views'       => $artikel->views,
                     'created_at'  => $artikel->created_at,
                 ];
             })->toArray();
@@ -37,6 +44,9 @@ class InformasiController extends Controller
                 ->first();
 
             if ($detail) {
+                // Tambah views setiap artikel dibuka
+                $detail->increment('views');
+
                 session(['show_detail' => true]);
 
                 $artikelDetail = [
@@ -45,6 +55,7 @@ class InformasiController extends Controller
                     'gambar'      => $detail->gambar,
                     'kategori_id' => $detail->kategori_id,
                     'kategori'    => $detail->kategori?->nama,
+                    'views'       => $detail->views,
                     'created_at'  => $detail->created_at,
                     'deskripsi'   => is_array($detail->deskripsi)
                         ? $detail->deskripsi
@@ -54,7 +65,7 @@ class InformasiController extends Controller
                 $artikelTerkait = Artikel::with('kategori')
                     ->where('kategori_id', $detail->kategori_id)
                     ->where('slug', '!=', $request->slug)
-                    ->latest('created_at')
+                    ->orderBy('views', 'desc')
                     ->take(4)
                     ->get()
                     ->map(function ($a) {
@@ -63,13 +74,14 @@ class InformasiController extends Controller
                             'slug'       => $a->slug,
                             'gambar'     => $a->gambar,
                             'kategori'   => $a->kategori?->nama,
+                            'views'      => $a->views,
                             'created_at' => $a->created_at,
                         ];
                     })->toArray();
             }
         }
 
-        return view('pages.informasi', compact('artikels', 'artikelDetail', 'artikelTerkait', 'search'));
+        return view('pages.informasi', compact('artikels', 'artikelDetail', 'artikelTerkait', 'search', 'sortBy'));
     }
 
     public function closeDetail()

@@ -13,6 +13,7 @@ class Artikel extends Model
         'slug',
         'sumber',
         'kategori_id',
+        'views',
         'gambar',
         'deskripsi',
     ];

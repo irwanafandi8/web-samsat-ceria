@@ -437,7 +437,7 @@
     color: #dc2626;
 }
 
-/* ===== SHARE ARTIKEL ===== */
+/* SHARE ARTIKEL */
 .share-artikel {
     margin-top: 1.5rem;
     padding-top: 1.5rem;
@@ -505,4 +505,63 @@
 .share-fb:hover {
     background: #2563eb;
     color: #ffffff;
+}
+
+/* SORT BUTTONS */
+.section-header-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.sort-buttons {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.sort-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.375rem;
+    padding: 0.4rem 0.875rem;
+    border-radius: 9999px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-decoration: none;
+    background: #f3f4f6;
+    color: #6b7280;
+    transition: all 0.3s ease;
+    border: 1.5px solid transparent;
+}
+
+.sort-btn:hover {
+    background: #fee2e2;
+    color: #dc2626;
+}
+
+.sort-btn.active {
+    background: linear-gradient(135deg, #dc2626, #7f1d1d);
+    color: #ffffff;
+    border-color: transparent;
+}
+
+.sort-btn.active i {
+    color: #ffffff;
+}
+
+/* VIEWS */
+.informasi-views {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.375rem;
+    font-size: 0.75rem;
+    color: #6b7280;
+    margin: 0 !important;
+}
+
+.informasi-views i {
+    color: #dc2626;
 }

@@ -446,3 +446,73 @@
 .search-result-info strong {
     color: #dc2626;
 }
+
+/* ===== SHARE ARTIKEL ===== */
+.share-artikel {
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #e5e7eb;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+.share-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.375rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #374151;
+    margin: 0 !important;
+}
+
+.share-label i {
+    color: #dc2626;
+}
+
+.share-buttons {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.share-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.375rem;
+    padding: 0.4rem 0.875rem;
+    border-radius: 9999px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.share-wa {
+    background: #dcfce7;
+    color: #16a34a;
+}
+.share-wa:hover {
+    background: #16a34a;
+    color: #ffffff;
+}
+
+.share-twitter {
+    background: #f3f4f6;
+    color: #111827;
+}
+.share-twitter:hover {
+    background: #111827;
+    color: #ffffff;
+}
+
+.share-fb {
+    background: #dbeafe;
+    color: #2563eb;
+}
+.share-fb:hover {
+    background: #2563eb;
+    color: #ffffff;
+}

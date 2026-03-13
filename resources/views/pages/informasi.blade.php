@@ -53,6 +53,31 @@
                             <i class="far fa-calendar-alt"></i>
                             {{ \Carbon\Carbon::parse($artikelDetail['created_at'])->format('d M Y') }}
                         </p>
+
+                        {{-- SHARE ARTIKEL --}}
+                        <div class="share-artikel">
+                            <p class="share-label">
+                                <i class="fas fa-share-alt"></i>
+                                Bagikan artikel ini:
+                            </p>
+                            <div class="share-buttons">
+                                <a href="https://wa.me/?text={{ urlencode($artikelDetail['judul'] . ' - ' . url()->current() . '?slug=' . request('slug')) }}"
+                                    target="_blank" class="share-btn share-wa">
+                                    <i class="fab fa-whatsapp"></i>
+                                    WhatsApp
+                                </a>
+                                <a href="https://twitter.com/intent/tweet?text={{ urlencode($artikelDetail['judul']) }}&url={{ urlencode(url()->current() . '?slug=' . request('slug')) }}"
+                                    target="_blank" class="share-btn share-twitter">
+                                    <i class="fab fa-x-twitter"></i>
+                                    Twitter
+                                </a>
+                                <a href="https://www.facebook.com/sharer/sharer.php?u={{ urlencode(url()->current() . '?slug=' . request('slug')) }}"
+                                    target="_blank" class="share-btn share-fb">
+                                    <i class="fab fa-facebook-f"></i>
+                                    Facebook
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
 

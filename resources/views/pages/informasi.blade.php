@@ -94,6 +94,34 @@
         </div>
     @endif
 
+    {{-- SEARCH --}}
+    <section class="section-search">
+        <div class="container">
+            <form action="{{ route('informasi.index') }}" method="GET" class="search-form">
+                <div class="search-input-wrapper">
+                    <i class="fas fa-search search-icon"></i>
+                    <input type="text" name="search" placeholder="Cari artikel..." value="{{ $search ?? '' }}"
+                        class="search-input" autocomplete="off">
+                    @if (!empty($search))
+                        <a href="{{ route('informasi.index') }}" class="search-clear">
+                            <i class="fas fa-times"></i>
+                        </a>
+                    @endif
+                </div>
+                <button type="submit" class="search-btn">
+                    Cari
+                </button>
+            </form>
+
+            @if (!empty($search))
+                <p class="search-result-info">
+                    Menampilkan hasil untuk: <strong>"{{ $search }}"</strong>
+                    — {{ count($artikels) }} artikel ditemukan
+                </p>
+            @endif
+        </div>
+    </section>
+
     {{-- SECTION INFORMASI --}}
     <section class="section-informasi-list animate-on-scroll">
         <div class="container">

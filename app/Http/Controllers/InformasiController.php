@@ -9,7 +9,12 @@ class InformasiController extends Controller
 {
     public function index(Request $request)
     {
+        $search = $request->get('search');
+
         $artikels = Artikel::with('kategori')
+            ->when($search, function ($query) use ($search) {
+                $query->where('judul', 'ilike', "%{$search}%");
+            })
             ->latest('created_at')
             ->get()
             ->map(function ($artikel) {
@@ -46,7 +51,6 @@ class InformasiController extends Controller
                         : json_decode($detail->deskripsi, true),
                 ];
 
-                // Artikel terkait — kategori sama, exclude artikel ini
                 $artikelTerkait = Artikel::with('kategori')
                     ->where('kategori_id', $detail->kategori_id)
                     ->where('slug', '!=', $request->slug)
@@ -65,7 +69,7 @@ class InformasiController extends Controller
             }
         }
 
-        return view('pages.informasi', compact('artikels', 'artikelDetail', 'artikelTerkait'));
+        return view('pages.informasi', compact('artikels', 'artikelDetail', 'artikelTerkait', 'search'));
     }
 
     public function closeDetail()
